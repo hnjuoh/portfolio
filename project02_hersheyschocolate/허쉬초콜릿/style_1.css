@@ -1,0 +1,552 @@
+/* 언어 설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none; vertical-align: bottom;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+.area_logo, .weare_logo, .titleIconImg, .letterIcon, .titleIcon, .milt_titIcon {
+    animation: chocomove 1s infinite alternate ease-in-out;
+}
+@keyframes chocomove {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px); 
+    }
+}
+
+
+
+
+
+/* header 설정 */
+header {
+    width: 100%;
+    height: 171px;
+    background-color: #FFF2DE; 
+    position: relative;
+}
+header h1 {
+    position: absolute;
+    top: 31px;
+    left: 80px;
+}
+
+/* 유틸리티 */
+.util {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+.util li {
+    padding-right: 10px;
+}
+.util li a {}
+
+
+
+
+
+/* GNB */
+.gnb {}
+.gnb ul {display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 200px;}
+.gnb ul li {
+    padding-top: 68px;
+    padding-right: 90px;
+    
+}
+.gnb ul li a {
+    font-size: 25px;
+}
+.gnb ul li a:hover {
+    color: #FFC450;
+}
+
+
+
+/* GNB 2뎁스메뉴 */
+/* ex02 가로 정렬 다운메뉴 */
+.gnb {height: 100px;
+    margin-bottom: 80px;}
+.gnb ul {position: relative;}
+.gnb ul ul {display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;}
+.gnb ul ul li {width: 25%;}
+.gnb ul>li:hover>ul {display: flex;}
+
+
+
+/* hero 설정 */
+.hero {
+    width: 100%;
+    height: 822px;
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    background-image: url(img/hero_bg.svg);
+    
+}
+.hero p {
+    position: absolute;
+    top: 283px;
+    left: 400px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.hero p.on {animation: slide 2s ease-in-out 1;}
+@keyframes slide {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: 400px;
+    }
+}
+
+
+
+.hero img {
+    width: 600px;
+    height: 746px;
+    position: absolute;
+    right: 300px;
+    top: 0;
+    animation: floatAnimation 1s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px); 
+    }
+}
+
+/* area 설정 */
+.areaBox {
+    width: 100%;
+    height: 1000px;
+    background-image: url(img/area_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.areaBox .area {
+    position: relative;
+    
+    
+}
+/* 타이틀 로고 */
+.areaBox .area_logo {
+    position: absolute;
+    top: 40px;
+    left: 910px;
+    padding-top: 15px;
+}
+.areaBox .area h2 {
+    
+    color: #56230E;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.areaBox .area .imgBox {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+.areaBox .imgBox a {
+    margin-right: 30px;
+    
+}
+/* 클릭하면 움직임 */
+.areaBox .imgBox:hover {
+    animation: hover01 0.5s infinite alternate;
+    
+
+}
+@keyframes hover01 {
+
+    0% {  transform: rotate(5deg);}
+    100%{  transform: rotate(-5deg);}
+}
+
+
+
+
+/* weare 설정 */
+.weare {
+    width: 100%;
+    height: 900px;
+    
+}
+.weare .weare_logo {
+    text-align: center;
+    margin-top: 30px;
+}
+.weare h2 {
+    color: #56230E;
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.weare .vid {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+.weare .vid .vid_img1 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+.weare .vid .vid_img2 {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+
+/* milt 설정 */
+.milt {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    
+}
+/* 허쉬할아버지 img */
+.milt_inner1 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+.milt_inner1 .imgbox {
+    
+}
+
+.milt_inner2 {
+    width: 50%;
+    height: auto;
+    
+}
+.milt_inner2 h2 {
+    color: #56230E;
+    font-size: 60px;
+    font-weight: normal;
+    position: absolute;
+    right: 25%;
+    top: 35%;
+
+}
+
+/* 타이틀 로고 */
+.milt_inner2 .milt_titIcon {
+    position: absolute;
+    top: 29%;
+    right: 39%;
+}
+.milt_inner2 h2 span {
+    font-family: 'Italianno', cursive;
+    font-size: 30px;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.milt_inner2 p {
+    font-size: 24px;
+    color: #56230E;
+    position: absolute;
+    right: 23%;
+    top: 50%;
+}
+
+/* 하트허쉬 */
+.milt_inner2 .hs_s2 {
+    position: absolute;
+    right: 12%;
+    bottom: 0;
+}
+
+
+
+/* banner 설정 */
+/* background-attachment */
+.banner {
+    width: 100%;
+    height: 2185px;
+    background-image: url(img/banner_bg2.svg);
+    background-size: cover;
+    position: relative;
+}
+
+.banner .banner_inner1 img:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.banner .banner_inner1 img:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+}
+.banner .banner_inner1 img:nth-child(3) {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+.banner .banner_inner1 img:nth-child(4) {
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+
+}
+
+.banner .banner_inner1 p {
+    color: #FFC450;
+    text-align: center;
+    padding-top: 400px;
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+
+/* banner_inner2 */
+/* 심플한 재료, 행복의 맛! */
+.banner2 .titleIconImg {
+    position: absolute;
+    top: 51%;
+    left: 48%;
+}
+.banner2 p {
+    text-align: center;
+    padding-top: 600px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.banner2 .imgBox img {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 29%;
+    bottom: 10%;
+}
+
+
+
+
+
+/* donation 설정 */
+.donation {
+    width: 90%;
+    height: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+.donation .letterIcon img {
+    width: 140px;
+    height: 150px;
+    position: absolute;
+    top: 1%;
+    left: 24%;
+}
+.donation h2 {
+    color: #56230E;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 50px;
+}
+.donation .txtBox {
+    text-align: center;
+    padding-top: 21px;
+    font-size: 24px;
+    
+}
+
+/* 우리의 중점분야 */
+.donation .txtBox2 {
+    text-align: center;
+    padding-top: 73px;
+    font-size: 24px;
+}
+.donation p {
+    padding-top: 10px;
+}
+
+
+
+/* donation_inner */
+.donation_inner {
+    
+    display: flex;
+}
+.donation_inner2 {
+display: flex;
+padding-top: 20px;
+width: 75%;
+margin: 0 auto;
+overflow: hidden;
+}
+.donation_inner2 img {
+    padding: 10px;
+
+}
+.donation_inner2 p {
+    transform: translateX(40%); /* 텍스트를 가운데로 정렬하기 위해 사용 */
+    padding: 10px;
+    margin: 0;
+    width: auto;
+}
+
+.donation_inner2 img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+
+/* cook 설정 */
+/* 배경 */
+.cook {
+    background-image: url(img/recipes_bg.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 1600px;
+    padding-top: 200px;
+    position: relative;
+
+}
+.cook .titleIcon img {
+    position: absolute;
+    top: 14%;
+    left: 48%;
+
+}
+.cook h2 {
+    color: #FFC450;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+/* 자동슬라이드 */
+.cook {
+    overflow: hidden;
+}
+.cook .imgBox {
+    width: 100%;
+    height: 500px;
+    
+}
+.cook .imgBox .img_slide {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+}
+.cook .imgBox .img_slide ul {
+    position: absolute;
+    display: flex;
+    height: 50%;
+    overflow: hidden;
+    /* margin-left: 200px; */
+    
+}
+.cook .imgBox li {
+    padding: 0 20px;
+}
+.cook .imgBox li img {
+    width: 400px;
+    height: 420px;
+}
+
+.cook .imgBox .img_slide ul:nth-child(1) {
+    left: 140%;
+    animation: ani1 20s linear infinite;
+}
+.cook .imgBox .img_slide ul:nth-child(2) {
+    left: 0;
+    animation: ani2 20s linear infinite;
+}
+
+.cook .imgBox .img_slide:hover ul {
+    animation-play-state: paused;
+}
+
+@keyframes ani1 {
+
+    0%{left: 140%;}
+    50%{left: 0;}
+    100%{left: -140%;}
+}
+
+@keyframes ani2 {
+
+    0%{left: 0;}
+    50%{left:-140% ;}
+    50.00001% {left: 140%;}
+    100%{left: 0%;}
+} 
+
+
+.cook .imgBox li img {
+    padding-top: 300px;
+}
+
+
+
+
+
+
+
+
+/* footer 설정 */
+footer {
+    width: 100%;
+    height: 252px;
+    background-color: #56240e7e;
+    position: relative;
+}
+footer img {
+    position: absolute;
+    left: 44%;
+    top: 20%;
+}
+footer p {
+    text-align: center;
+    padding-top: 160px;
+    color: #000;
+}
+
+

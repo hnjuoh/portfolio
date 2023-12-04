@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트1_선사박물관</title>
+    <!-- 제이쿼리 연결 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 외부스크립트연결 -->
+    <script src="js/js.js"></script>
+    <!-- 폰트어썸 연결 -->
+    <script src="https://kit.fontawesome.com/41a778d5bb.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<body>
+    <header class="box1"> 
+        <div class="logo">
+            <img src="img/MAIN_LOGO.png" alt="logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">우리 박물관소개</a></li>
+                <li><a href="#">전시/예약</a></li>
+                <li><a href="#">함께해요</a></li>
+                <li><a href="#">새소식</a></li>
+                <li><a href="#">선사네 사진관</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+        </div>
+        <div class="util">
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+<div class="boxA">
+    
+    
+        <div class="box2">
+            <div class="slide">
+                <ul>
+                    <li><img src="img/thatched-cottage-703425_1920.jpg" alt=""></li>
+                    <li><img src="img/lisbon-4379661_1920.jpg" alt=""></li>
+                    <li><img src="img/slide_3.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    <!-- <ul>
+                    <li><img src="img/thatched-cottage-703425_1920.jpg" alt=""></li>
+                    <li><img src="img/lisbon-4379661_1920.jpg" alt=""></li>
+                    <li><img src="img/slide_3.jpg" alt=""></li>
+                </ul> -->
+    
+    
+    
+        <div class="box3">
+            <h2>전시 예약</h2>
+    
+            <form action="#">
+                <div class="name">
+                    <label for="name">이름:</label>
+                    <input type="text" id="name" placeholder="예약자 이름을 입력해주세요.">
+                </div>
+        
+                <div class="date">
+                    <label for="date">날짜:</label>
+                    <input type="text" id="date" placeholder="날짜를 입력해주세요.">
+                    <div class="cal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+            
+            
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="people">
+                    <label for="people">인원:</label>
+                    <input type="number" min="1" max="30" id="peopleinput" placeholder="인원을 지정해주세요">
+                </div>
+        
+                <button type="button">예약하기</button>
+            </form>
+            
+        </div>
+    
+    
+    
+    
+</div>
+
+
+
+
+
+
+
+
+    <!-- ############ 예약시스템 현주ver ###########-->
+
+<!-- <div class="box3-1">
+            
+
+            <div class="box3-2">
+            <div class="formbox">
+                <form action="#">
+                    <span>이름</span><input type="name" id="input1" placeholder="예약자 이름">
+                    <span>연락처</span><input type="tel" id="input2" pattern="[0~9]{3}-[0~9]{4}-[0~9]{4}" placeholder="연락가능한 연락처를 적어주세요:)">
+                    <span>예약인원</span><input type="number" id="input3" min="1" max="30" placeholder="인원을 체크해주세요.">
+                    <input type="submit" id="input4">
+                </form>
+            </div>
+        </div>
+
+        
+            <div class="box3-3">
+                <div class="cal">
+                    <img src="img/cal.jpg" alt="">
+                </div>
+            </div>
+        </div> -->
+
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 박스4 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- <div class="box4">
+        <div class="title_Top"></div>
+    
+        <div class="listBox">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <p class="more">화살표</p>
+    </div> -->
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 박스4 끝 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+
+
+
+    <div class="box5">
+        <!-- <div class="title">공지사항</div> -->
+        
+        <div class="box5_inner"><h2>박물관 소식</h2>
+            <div class="titleBox">
+                
+                <ul>
+                    <li class="on">새소식</li>
+                    <li>보도자료</li>
+                    <li>자주하는 질문</li>
+                </ul>
+            </div>
+            <div class="listBox">
+                <div class="news" style="display: block;">
+                    <ul>
+                        <li><span><a href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></span></li>
+                        <li>[교육] 2023 대전선사박물관 10월 집콕탐험대 <청동기 탐험대 - 고인돌 테라리움 만들기 안내> <span>2023.10.05</span></li>
+                        <li>2023 대전선사박물관 추석연휴 휴관일 안내 (9/28(금), 10/4(수) 휴관) <span>2023.09.19</span></li>
+                        <li>대전시립박물관 모바일 앱(스마트 전시관람 시스템) 만족도 조사 <span>2023.07.04</span></li>
+                    </ul>
+                </div>
+                <div class="article">
+                    <ul>
+                        <li><span><a href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></span>대전시립박물관·대전선사박물관, ‘2023년 박물관·미술관 주간’ 참여 <span>2023.05.04</span></li>
+                        <li>[볼만한 공연·전시] 대전선사박물관 특별전 '호모 코쿠엔스' 외 <span>2022.12.28</span></li>
+                        <li>대전선사박물관, ‘요리하는 인간’ 특별전 개최 <span>2022.12.23</span></li>
+                        
+                    </ul>
+                </div>
+                <div class="qna">
+                    <ul>
+                        <li>Q. 단체예약은 몇명까지 가능한가요?</li>
+                        <li>Q. 박물관 휴일이 궁금해요!</li>
+                        <li>Q. 전시는 몇 살부터 관람할 수 있나요?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="box6">
+        <div class="title">
+            <h2>상설 전시</h2>
+        </div>
+        <div class="listBox">
+            <ul>
+                <li><img src="img/photo01.png" alt=""></li>
+                <li><img src="img/photo02.png" alt=""></li>
+                <li><img src="img/photo03.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="box7">
+        <p>지금 대전선사박물관에서 전시 도록을 만나보세요</p>
+    </div>
+
+
+
+
+
+
+
+    <div class="box8">
+        <div class="map">
+            <h2>오시는 길</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.548499030911!2d127.32131087582833!3d36.37171377237242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654b6b5f0eca6b%3A0xbcda94071dc627c1!2z64yA7KCE7ISg7IKs67CV66y86rSA!5e0!3m2!1sko!2skr!4v1699853009918!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="txtBox">
+            <ul>
+                <li>
+                    <strong><i class="fa fa-building" aria-hidden="true"></i>주소</strong>
+                    <p>(34084) 대전광역시 유성구 노은동로 126 <br> 042) 270-8640</p>
+                </li>
+                <li>
+                    <strong><i class="fa fa-subway" aria-hidden="true"></i>지하철</strong>
+                    <p>노은역 4번출구 도보 11분<br> 월드컵경기장역 6번출구 도보 15분</p>
+                </li>
+                <li>
+                    <strong><i class="fa fa-bus" aria-hidden="true"></i>버스</strong>
+                    <p>유성경찰서 (42-480) : 101, 114, 116<br>
+                        노은동화훼단지 (42-280): 301, 302, 119<br>
+                        노은동화훼단지 (42-290): 342, 119</p>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footerBox">
+            <ul>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                
+            </ul>
+            <p>(34084) 대전광역시 유성구 노은동로 126 042) 270-8640</p>
+        </div>
+    </footer>
+
+</body>
+</html>

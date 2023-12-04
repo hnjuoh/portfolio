@@ -2,7 +2,7 @@
 
 
 
-// 마우스 커서 따라다니는 허쉬 민트초콜릿
+// 허쉬 민트초콜릿 마우스
 
 $(document).ready(function() {
     $(document).on('mousemove', function(e) {

@@ -9,16 +9,17 @@
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #000;}
 img {border: none; vertical-align: bottom;}
-body {font-family: 'Noto Sans KR', sans-serif;
+body {
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFF2DE;
     cursor: none;
 }
 
 
 
-/* sub 스크롤바 색상 설정 */
+/* sub 스크롤바 설정 */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
     height: 10px;
 }
 
@@ -75,13 +76,7 @@ header {
     height: 780px;
     overflow: hidden;
 }
-.sub_vid {
-    
-}
-
-
-
-
+.sub_vid {}
 
 
 
@@ -96,11 +91,6 @@ header {
     height: 454px;
 } */
 
-
-
-
-
-
 /* 제품 구매  */
 /* header p {
     color: #FFC450;
@@ -110,6 +100,10 @@ header {
     top: 40%;
     left: 44%;
 } */
+
+
+
+
 
 /* 서브 페이지 타이틀 
 (환상의 맛, 허쉬 브랜드)*/
@@ -128,20 +122,22 @@ header {
 .upChoco {
     width: 100%;
     height: 600px;
-    
 }
+
 .upChoco ul {
     display: flex;
     justify-content: center;
-    
 }
+
 .upChoco li {
     margin-right: 49px;
     margin-bottom: 196px;
 }
+
 .upChoco a {
     cursor: none;
 }
+
 .upChoco img {}
 
 
@@ -151,18 +147,14 @@ header {
 /* 상단 버튼1 */
 /* 크리미 밀크 초콜릿 버튼 */
 
-.up_BTN01 {
-
-}
+.up_BTN01 {}
 .up_BTN01 ul {
     display: flex;
     position: absolute;
     top: 143.8%;
     left: 20.8%;
-    
-
-    
 }
+
 .up_BTN01 li {
     border-radius: 50px;
     background-color: #3F000B;
@@ -171,9 +163,7 @@ header {
     color: #FFC450;
     font-weight: bold;
     margin-right: 10px;
-    
 }
-
 
 .up_BTN01 li:hover {
     border-radius: 50px;
@@ -261,15 +251,17 @@ header {
 .downChoco {
     width: 100%;
     height: 600px;
-    
 }
+
 .downChoco ul {
     display: flex;
     justify-content: center;
 }
+
 .downChoco li {
     margin-right: 49px;
 }
+
 .downChoco a {
     cursor: none;
 }
@@ -280,18 +272,14 @@ header {
 
 /* 하단 버튼1 */
 /* 키세스 */
-.down_BTN01 {
-    
-}
+.down_BTN01 {}
 .down_BTN01 ul {
     display: flex;
     position: absolute;
     left: 20.7%;
     top: 206%;
-
-    
-
 }
+
 .down_BTN01 li {
     border-radius: 50px;
     background-color: #3F000B;
@@ -318,16 +306,14 @@ header {
 
 /* 하단 버튼2 */
 /* 리세스 */
-.down_BTN02 {
-    
-}
+.down_BTN02 {}
 .down_BTN02 ul {
     display: flex;
     position: absolute;
     left: 41.4%;
     top: 206%;
-
 }
+
 .down_BTN02 li {
     border-radius: 50px;
     background-color: #3F000B;
@@ -352,17 +338,18 @@ header {
 
 
 
+
+
 /* 하단 버튼3 */
 /* 후퍼스 */
-.down_BTN03 {
-    
-}
+.down_BTN03 {}
 .down_BTN03 ul {
     display: flex;
     position: absolute;
     right: 22.8%;
     bottom: -110.5%;
 }
+
 .down_BTN03 li {
     border-radius: 50px;
     background-color: #3F000B;
@@ -390,26 +377,18 @@ header {
 
 
 
-
-
-
-
-
-
-
-
 /* footer 설정 */
 footer {
-    
     width: 100%;
     height: 150px;
-
 }
+
 .choco1 {
     width: 100%;
     height: 400px;
     position: relative;
 }
+
 .choco1 img {
     position: absolute;
     left: 0;
@@ -419,6 +398,7 @@ footer {
 .choco2 {
     position: relative;
 }
+
 .choco2 img {
     position: absolute;
     left: 220px;
@@ -428,16 +408,17 @@ footer {
 .choco4 {
     position: relative;
 }
+
 .choco4 img {
     position: absolute;
     right: 230px;
     bottom: -20px;
-
 }
 
 .choco3 {
     position: relative;
 }
+
 .choco3 img {
     position: absolute;
     right: 0;

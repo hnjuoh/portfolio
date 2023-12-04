@@ -16,7 +16,7 @@ body {font-family: 'Noto Sans KR', sans-serif;
 
 /* 메인페이지 스크롤바 색상 설정 */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
     height: 10px;
 }
 
@@ -43,6 +43,7 @@ body {font-family: 'Noto Sans KR', sans-serif;
 .area_logo, .weare_logo, .titleIconImg, .letterIcon, .titleIcon, .milt_titIcon {
     animation: chocomove 1s infinite alternate ease-in-out;
 }
+
 @keyframes chocomove {
     0% {
         transform: translateY(0);
@@ -67,6 +68,7 @@ header {
     background-color: #FFF2DE; 
     position: relative;
 }
+
 header h1 {
     position: absolute;
     top: 31px;
@@ -81,6 +83,7 @@ header h1 {
     top: 12px;
     right: 16px;
 }
+
 .util li {
     padding-right: 10px;
 }
@@ -221,22 +224,26 @@ header h1 {
     height: 900px;
     
 }
+
 .weare .weare_logo {
     text-align: center;
     margin-top: 30px;
 }
+
 .weare h2 {
     color: #56230E;
     font-size: 60px;
     margin-bottom: 30px;
     text-align: center;
 }
+
 .weare .vid {
     width: 100%;
     height: 800px;
     overflow: hidden;
     position: relative; /* 영상위에 초코들 */
 }
+
 
 
 /* 동영상 위에서 초콜릿 내려오기 */
@@ -250,6 +257,7 @@ header h1 {
     bottom: 10px;
     left: 0;
 }
+
 .weare .vid .vid_img2 {
     position: absolute;
     top: 10px;
@@ -266,6 +274,7 @@ header h1 {
     position: relative;
     
 }
+
 /* 허쉬할아버지 img */
 .milt_inner1 {
     width: 50%;
@@ -290,6 +299,7 @@ header h1 {
     height: auto;
     
 }
+
 .milt_inner2 h2 {
     color: #56230E;
     font-size: 60px;
@@ -306,12 +316,14 @@ header h1 {
     top: 29%;
     right: 39%;
 }
+
 .milt_inner2 h2 span {
     font-family: 'Italianno', cursive;
     font-size: 30px;
     padding-left: 10px;
     font-weight: normal;
 }
+
 .milt_inner2 p {
     font-size: 24px;
     color: #56230E;
@@ -448,21 +460,24 @@ header h1 {
     display: flex;
 }
 .donation_inner2 {
-display: flex;
-padding-top: 20px;
-width: 75%;
-margin: 0 auto;
-overflow: hidden;
+    display: flex;
+    padding-top: 20px;
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
 }
+
 .donation_inner2 img {
     padding: 10px;
 }
+
 .donation_inner2 p {
     transform: translateX(40%); /* 텍스트를 가운데로 정렬하기 위해 사용 */
     padding: 10px;
     margin: 0;
     width: auto;
 }
+
 /* 마우스 hover 시 확대 */
 .donation_inner2 img:hover {
     transform: scale(1.1);
@@ -486,11 +501,13 @@ overflow: hidden;
     padding-top: 200px;
     position: relative;
 }
+
 .cook .titleIcon img {
     position: absolute;
     top: 14%;
     left: 48%;
 }
+
 .cook h2 {
     color: #FFC450;
     font-size: 60px;
@@ -498,20 +515,24 @@ overflow: hidden;
     padding-top: 100px;
 }
 
+
 /* 자동슬라이드 */
 .cook {
     overflow: hidden;
 }
+
 .cook .imgBox {
     width: 100%;
     height: 500px;
 }
+
 .cook .imgBox .img_slide {
     width: 100%;
     height: 500px;
     display: flex;
     overflow: hidden;
 }
+
 .cook .imgBox .img_slide ul {
     position: absolute;
     display: flex;
@@ -520,9 +541,11 @@ overflow: hidden;
     /* margin-left: 200px; */
     
 }
+
 .cook .imgBox li {
     padding: 0 20px;
 }
+
 .cook .imgBox li img {
     width: 400px;
     height: 420px;
@@ -571,11 +594,13 @@ footer {
     background-color: #56240e7e;
     position: relative;
 }
+
 footer img {
     position: absolute;
     left: 44.3%;
     top: 20%;
 }
+
 footer p {
     text-align: center;
     padding-top: 160px;

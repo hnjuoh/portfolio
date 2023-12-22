@@ -1,5 +1,4 @@
-// 제이쿼리방식으로 시작할지 
-// 라이브러리를 사용하지않고 사용할지를 결정하세요
+// 허쉬초콜릿 제이쿼리!!!
 
 
 $(function(){
@@ -139,6 +138,17 @@ $(function(){
         });
     });
 
+    // ###################### 초콜릿들 슬라이드 #######################
+    let img01 = document.querySelector(".banner .banner_inner1 .img01")
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY
+        console.log("scrollY", value);
+
+        if(value>400){
+            
+        }
+    })
 
 
 

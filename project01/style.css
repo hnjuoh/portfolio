@@ -80,7 +80,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
         overflow: hidden;
         }
 
-.slide:nth-child(1) {left: 0;
+/* .slide:nth-child(1) {left: 0;
                 animation: ani1 10s linear infinite;}
 .slide:nth-child(2) {left: 0;
                 animation: ani2 10s linear infinite;}
@@ -101,7 +101,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
                 50%{left:-100% ;}
                 50.00001% {left: 100%;}
                 100%{left: 0%;}
-                }
+                } */
 
 
 

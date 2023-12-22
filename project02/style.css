@@ -9,7 +9,9 @@ ul, ol {list-style: none;}
 a {text-decoration: none; color: #000;}
 img {border: none; vertical-align: bottom;}
 body {font-family: 'Noto Sans KR', sans-serif;
-        cursor: none;}
+        cursor: none;
+        overflow-x: hidden; /* 가로 스크롤 x*/
+}
 
 
 
@@ -124,8 +126,9 @@ header h1 {
     background-position: center bottom;
     position: relative;
     background-image: url(img/hero_bg.svg);
-    
+    overflow: hidden;
 }
+
 .hero p {
     position: absolute;
     top: 283px;
@@ -134,6 +137,7 @@ header h1 {
     font-weight: bold;
     color: #fff;
     animation: slide 2s ease-in-out alternate;
+    
 }
 
 @keyframes slide {
@@ -171,28 +175,34 @@ header h1 {
 .areaBox {
     width: 100%;
     height: 1000px;
-    background-image: url(img/area_bg.png);
+    background-image: url(img/area_new_bg.gif); /* 배경사진 깨짐 바꿔야함 */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
+    
 }
 .areaBox .area {
     position: relative;
-    
+    width: 100%;
     
 }
 
+
 /* 타이틀 로고 */
 .areaBox .area_logo {
+    width: 100%;
     position: absolute;
-    top: 40px;
-    left: 910px;
-    padding-top: 15px;
+    text-align: center;
+    /* top: 29%;
+    left: 48%; */
+    padding-top: 70px;
+    
 }
+
 .areaBox .area h2 {
     
-    color: #56230E;
+    color: #eee;
     font-size: 60px;
     text-align: center;
     padding-top: 100px;
@@ -200,9 +210,10 @@ header h1 {
 }
 
 .areaBox .area .imgBox {
-    position: absolute;
-    top: 300px;
-    left: 200px;
+    width: 100%;
+    text-align: center;
+    margin-top: 220px;
+    
 }
 .areaBox .imgBox a {
     margin-right: 30px;
@@ -239,9 +250,14 @@ header h1 {
 
 .weare .vid {
     width: 100%;
-    height: 800px;
+    /* height: 1200px; */
     overflow: hidden;
     position: relative; /* 영상위에 초코들 */
+}
+
+video {
+    width: 100%;
+    /* height: 800px; */
 }
 
 
@@ -270,20 +286,31 @@ header h1 {
 /* milt 설정 */
 .milt {
     width: 100%;
-    height: 800px;
+    min-height: 100vh;
     position: relative;
     
 }
 
+
 /* 허쉬할아버지 img */
 .milt_inner1 {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 900px;
     position: absolute;
-    top: 200px;
-    left: 400px;
+    top: 40%;
+    left: 10%;
     animation: slide2 1.5s ease-in-out alternate;
+
 }
+/* .milt_inner1 .imgBox {
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    animation: slide2 1.5s ease-in-out alternate;
+    
+} */
 
 @keyframes slide2 {
     0% {
@@ -296,7 +323,8 @@ header h1 {
 
 .milt_inner2 {
     width: 50%;
-    height: auto;
+    height: 1000px;
+    text-align: center;
     
 }
 
@@ -306,14 +334,14 @@ header h1 {
     font-weight: normal;
     position: absolute;
     right: 25%;
-    top: 35%;
+    top: 45%;
 
 }
 
-/* 타이틀 로고 */
-.milt_inner2 .milt_titIcon {
+/* 타이틀 아이콘 */
+.milt_titIcon {
     position: absolute;
-    top: 29%;
+    top: 40%;
     right: 39%;
 }
 
@@ -329,7 +357,7 @@ header h1 {
     color: #56230E;
     position: absolute;
     right: 23%;
-    top: 50%;
+    top: 60%;
 }
 
 /* 하단 하트허쉬 */
@@ -352,26 +380,110 @@ header h1 {
 
 
 
-.banner .banner_inner1 img:nth-child(1) {
+.banner .banner_inner1 .img01 {
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 100px;
+    animation: bannerslide1 2s ease-out;
 }
-.banner .banner_inner1 img:nth-child(2) {
+.banner .banner_inner1 .img02 {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 100px;
+    animation: bannerslide2 2s ease-out;
 }
-.banner .banner_inner1 img:nth-child(3) {
+.banner .banner_inner1 .img03 {
     position: absolute;
     left: 10%;
     top: 30%;
+    animation: bannerslide3 2s ease-out;
 }
-.banner .banner_inner1 img:nth-child(4) {
+.banner .banner_inner1 .img04 {
     position: absolute;
     right: 10%;
     bottom: 50%;
+    animation: bannerslide4 2s ease-out;
 }
+
+
+
+/* 초코 슬라이드1 */
+@keyframes bannerslide1 {
+    from {
+        left: -100px;
+        opacity: 0
+    }
+    to {
+        left: 100px;
+        opacity: 1
+
+    }
+}
+
+
+/* 초코 슬라이드2 */
+@keyframes bannerslide2 {
+    from {
+        right: -100px;
+        opacity: 0
+    }
+    to {
+        right: 100px;
+        opacity: 1
+
+    }
+}
+
+
+/* 초코 슬라이드3 */
+@keyframes bannerslide3 {
+    from {
+        left: -10%;
+        opacity: 0
+    }
+    to {
+        left: 10%;
+        opacity: 1
+
+    }
+}
+
+
+
+/* 초코 슬라이드4 */
+@keyframes bannerslide4 {
+    from {
+        right: -10%;
+        opacity: 0
+    }
+    to {
+        right: 10%;
+        opacity: 1
+
+    }
+}
+
+/* 초코들 사라져라 */
+
+
+
+
+
+
+
+/* 둥둥뜨는 애니메이션 */
+/* .banner .banner_inner1 .imgBox > img {
+    animation: chocomove2 1s infinite alternate ease-in-out;
+}
+
+@keyframes chocomove2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px); 
+    }
+} */
 
 
 
@@ -404,13 +516,15 @@ header h1 {
     font-weight: bold;
 }
 
-.banner2 .imgBox img {
-    width: 800px;
+.banner2 .imgBox {
+    width: 100%;
     height: 600px;
-    position: absolute;
+    text-align: center;
+    margin-top: 50px;
+    /* position: absolute;
     left: 29%;
-    bottom: 10%;
-}
+    bottom: 10%;*/
+} 
 
 
 
@@ -418,18 +532,20 @@ header h1 {
 
 /* donation 설정 */
 .donation {
-    width: 90%;
-    height: 900px;
+    width: 100%;
+    height: 1000px;
     margin: 0 auto;
     position: relative;
 }
+
 .donation .letterIcon img {
     width: 140px;
     height: 150px;
     position: absolute;
-    top: 1%;
-    left: 24%;
+    top: 10%;
+    left: 25%;
 }
+
 .donation h2 {
     color: #56230E;
     font-size: 60px;
@@ -457,26 +573,26 @@ header h1 {
 
 /* donation_inner */
 .donation_inner {
-    display: flex;
+    margin-bottom: 100px;
 }
 .donation_inner2 {
+    width: 100%;
     display: flex;
-    padding-top: 20px;
-    width: 75%;
-    margin: 0 auto;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.donation_inner2 img {
-    padding: 10px;
+.donation_inner2 > div {
+    margin-top: 40px;
+    margin-right: 40px;
 }
-
 .donation_inner2 p {
-    transform: translateX(40%); /* 텍스트를 가운데로 정렬하기 위해 사용 */
-    padding: 10px;
-    margin: 0;
-    width: auto;
+    text-align: center;
+    padding: 20px;
+    
 }
+
 
 /* 마우스 hover 시 확대 */
 .donation_inner2 img:hover {
@@ -493,13 +609,14 @@ header h1 {
 /* cook 설정(레시피) */
 /* 배경 */
 .cook {
-    background-image: url(img/recipes_bg.png);
+    background-image: url(img/recipes_bg01.png);
     background-size: cover;
     background-position: center center;
     width: 100%;
     height: 1600px;
-    padding-top: 200px;
+    padding-top: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 .cook .titleIcon img {
@@ -516,72 +633,67 @@ header h1 {
 }
 
 
-/* 자동슬라이드 */
-.cook {
+/* 레시피 자동슬라이드 */
+.cook_imgBox {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
     overflow: hidden;
+    position: relative;
 }
 
-.cook .imgBox {
-    width: 100%;
-    height: 500px;
-}
-
-.cook .imgBox .img_slide {
-    width: 100%;
-    height: 500px;
+.cook_imgBox .img_slide {
     display: flex;
-    overflow: hidden;
 }
 
-.cook .imgBox .img_slide ul {
+.cook_imgBox ul {
+    display: flex;
     position: absolute;
-    display: flex;
-    height: 50%;
-    overflow: hidden;
-    /* margin-left: 200px; */
-    
+    margin: 0 700px;
 }
 
-.cook .imgBox li {
-    padding: 0 20px;
+.cook_imgBox li {
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+    /* margin-right: 20px; */
+    margin: 0 170px;
 }
 
 .cook .imgBox li img {
-    width: 400px;
-    height: 420px;
+    width: 300px;
+    height: 320px;
 }
 
-.cook .imgBox .img_slide ul:nth-child(1) {
-    left: 140%;
-    animation: ani1 20s linear infinite;
-}
-.cook .imgBox .img_slide ul:nth-child(2) {
+.cook_imgBox ul:nth-child(1) {
     left: 0;
-    animation: ani2 20s linear infinite;
+    animation: ani2 15s linear infinite;
 }
 
-.cook .imgBox .img_slide:hover ul {
-    animation-play-state: paused;
+
+.cook_imgBox ul:nth-child(2) {
+    left: 100%;
+    animation: ani1 15s linear infinite;
 }
+
+
+.cook_imgBox:hover ul {animation-play-state: paused;}
 
 @keyframes ani1 {
 
-    0%{left: 140%;}
+    0%{left: 100%;}
     50%{left: 0;}
-    100%{left: -140%;}
+    100%{left: -100%;}
 }
 
 @keyframes ani2 {
 
     0%{left: 0;}
-    50%{left:-140% ;}
-    50.00001% {left: 140%;}
+    50%{left:-100% ;}
+    50.00001% {left: 100%;}
     100%{left: 0%;}
 } 
 
-.cook .imgBox li img {
-    padding-top: 300px;
-}
 
 
 
@@ -590,21 +702,20 @@ header h1 {
 /* footer 설정 */
 footer {
     width: 100%;
-    height: 252px;
+    height: 250px;
     background-color: #56240e7e;
     position: relative;
+    
 }
-
-footer img {
-    position: absolute;
-    left: 44.3%;
-    top: 20%;
+footer .footerLogo {
+    text-align: center;
+    padding-top: 40px;
 }
-
 footer p {
     text-align: center;
-    padding-top: 160px;
+    padding-top: 40px;
     color: #000;
 }
+
 
 

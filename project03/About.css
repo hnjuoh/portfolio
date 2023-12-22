@@ -1,0 +1,169 @@
+/* 언어 설정  */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none; vertical-align: bottom;}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    height: 15000px;
+}
+
+
+
+/* 메인페이지 스크롤바 색상 설정 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+
+
+
+/* header, nav 설정 */
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+}
+header nav {
+    text-align: center;
+    z-index: 1;
+    
+}
+header ul {
+    display: flex;
+    align-items: center;
+    
+    
+}
+header li {
+    padding-top: 50px;
+    padding-right: 80px;
+}
+
+header a {
+    color: #000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+
+header p {
+    display: none;
+}
+header li:hover p {
+    display: block;
+}
+
+
+
+
+/* scroll 유도 아이콘 */
+.scroll-downs {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width :34px;
+    height: 55px;
+    z-index: 9999;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #333;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+
+
+
+
+
+
+/* About 설정 */
+section {
+    width: 100%;
+    height: calc(100% - 50px);
+    position: fixed;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    perspective: 2300px;
+}
+
+article {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1.2s;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+article img {
+    width: 100%;
+    height: 110vh;
+}
+
+
+article:nth-child(1) {
+    transform: translateZ(0);
+    
+}
+article:nth-child(2) {
+    transform: translateZ(-5000px);
+    opacity: .7;
+}
+article:nth-child(3) {
+    transform: translateZ(-10000px);
+    opacity: 0;
+}
+article:nth-child(4) {
+    transform: translateZ(-14000px);
+    opacity: 0;
+}
+
+article.on {
+    z-index: 5;
+    opacity: 1;
+}
+

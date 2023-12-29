@@ -138,18 +138,7 @@ $(function(){
         });
     });
 
-    // ###################### 초콜릿들 슬라이드 #######################
-    let img01 = document.querySelector(".banner .banner_inner1 .img01")
-
-    window.addEventListener('scroll',function(){
-        let value = window.scrollY
-        console.log("scrollY", value);
-
-        if(value>400){
-            
-        }
-    })
-
+    
 
 
 

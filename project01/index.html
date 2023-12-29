@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대전선사박물관</title>
+
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <!-- 제이쿼리 연결 -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
+    
     <!-- 외부스크립트연결 -->
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/js.js"></script>
+
     <!-- 폰트어썸 연결 -->
     <script src="https://kit.fontawesome.com/41a778d5bb.js" crossorigin="anonymous"></script>
 
@@ -23,6 +30,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <!-- datepicker -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
 
 
 
@@ -32,6 +42,7 @@
 
 
 <body>
+    <!-- 네비/SNS -->
     <header class="box1"> 
         <div class="logo">
             <img src="img/MAIN_LOGO.png" alt="logo">
@@ -60,190 +71,71 @@
 
 
 
+    <!-- 히어로 부분 (자동 전환) -->
 
-
-<div class="boxA">
-    
-    
+    <div class="boxA">
         <div class="box2">
             <div class="slide">
-                <ul>
+                <ul class="slides">
                     <li><img src="img/thatched-cottage-703425_1920.jpg" alt=""></li>
                     <li><img src="img/lisbon-4379661_1920.jpg" alt=""></li>
                     <li><img src="img/slide_3.jpg" alt=""></li>
                 </ul>
             </div>
         </div>
-    <!-- <ul>
-                    <li><img src="img/thatched-cottage-703425_1920.jpg" alt=""></li>
-                    <li><img src="img/lisbon-4379661_1920.jpg" alt=""></li>
-                    <li><img src="img/slide_3.jpg" alt=""></li>
-                </ul> -->
     
     
-    
+        <!-- 전시 예약 / 예약시스템 -->
         <div class="box3">
             <h2>전시 예약</h2>
-    
-            <form action="#">
-                <div class="name">
-                    <label for="name">이름:</label>
-                    <input type="text" id="name" placeholder="예약자 이름을 입력해주세요.">
-                </div>
-        
-                <div class="date">
-                    <label for="date">날짜:</label>
-                    <input type="text" id="date" placeholder="날짜를 입력해주세요.">
-                    <div class="cal">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>일</th>
-                                    <th>월</th>
-                                    <th>화</th>
-                                    <th>수</th>
-                                    <th>목</th>
-                                    <th>금</th>
-                                    <th>토</th>
-                                </tr>
-                            </thead>
-            
-            
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                </tr>
-            
-                                <tr>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                </tr>
-            
-                                <tr>
-                                    <td>12</td>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                </tr>
-            
-                                <tr>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                </tr>
-                                
-                                <tr>
-                                    <td>26</td>
-                                    <td>27</td>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+            <!-- 제이쿼리 달력 -->
+            <div id="datepicker"></div>
+
+            <!-- 예약시스템 - 인원수, 전시 선택 -->
+            <div id="reservation_group">
+                <form action="">
+                    <div class="input_group">
+                        <label for="">인원수</label>
+                        <input type="number" min="1" max="20" value="1" id="people">
                     </div>
-                </div>
-        
-                <div class="people">
-                    <label for="people">인원:</label>
-                    <input type="number" min="1" max="30" id="peopleinput" placeholder="인원을 지정해주세요">
-                </div>
-        
-                <button type="button">예약하기</button>
-            </form>
-            
-        </div>
-    
-    
-    
-    
-</div>
 
+                    <div class="input_group2">
+                        <label for="">전시 선택 :</label>
+                        <select name="" id="program_name">
+                            <option value="">전시를 선택해주세요.</option>
+                            <option value="">상설 전시</option>
+                            <option value="">특별 전시</option>
+                        </select>
+                    </div>
 
-
-
-
-
-
-
-    <!-- ############ 예약시스템 현주ver ###########-->
-
-<!-- <div class="box3-1">
-            
-
-            <div class="box3-2">
-            <div class="formbox">
-                <form action="#">
-                    <span>이름</span><input type="name" id="input1" placeholder="예약자 이름">
-                    <span>연락처</span><input type="tel" id="input2" pattern="[0~9]{3}-[0~9]{4}-[0~9]{4}" placeholder="연락가능한 연락처를 적어주세요:)">
-                    <span>예약인원</span><input type="number" id="input3" min="1" max="30" placeholder="인원을 체크해주세요.">
-                    <input type="submit" id="input4">
+                    <!-- 예약하기 버튼 -->
+                    <button id="reserve-button">예약하기</button>
                 </form>
             </div>
+            <!-- reservation_group 끝. -->
+            
         </div>
-
-        
-            <div class="box3-3">
-                <div class="cal">
-                    <img src="img/cal.jpg" alt="">
-                </div>
-            </div>
-        </div> -->
-
-
-
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 박스4 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-    <!-- <div class="box4">
-        <div class="title_Top"></div>
     
-        <div class="listBox">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <p class="more">화살표</p>
-    </div> -->
-
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 박스4 끝 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    
+    
+    
+    </div> <!-- 박스A 끝. -->
 
 
 
-
-
+    <!-- 공지사항 -->
     <div class="box5">
-        <!-- <div class="title">공지사항</div> -->
-        
         <div class="box5_inner"><h2>박물관 소식</h2>
+            <!-- 공지사항 타이틀 -->
             <div class="titleBox">
-                
                 <ul>
                     <li class="on">새소식</li>
                     <li>보도자료</li>
                     <li>자주하는 질문</li>
                 </ul>
             </div>
+            <!-- 공지사항 리스트 목록 -->
             <div class="listBox">
                 <div class="news" style="display: block;">
                     <ul>
@@ -274,7 +166,7 @@
 
 
 
-
+    <!-- 상설 전시 부분 -->
     <div class="box6">
         <div class="title">
             <h2>상설 전시</h2>
@@ -293,7 +185,7 @@
 
 
 
-
+    <!-- 배너바 -->
     <div class="box7">
         <p>지금 대전선사박물관에서 전시 도록을 만나보세요</p>
     </div>
@@ -303,7 +195,7 @@
 
 
 
-
+    <!-- 오시는 길 -->
     <div class="box8">
         <div class="map">
             <h2>오시는 길</h2>
@@ -331,12 +223,7 @@
     </div>
 
 
-
-
-
-
-
-
+    <!-- 푸터 부분 -->
     <footer>
         <div class="footerBox">
             <ul>
@@ -348,6 +235,29 @@
             <p>(34084) 대전광역시 유성구 노은동로 126 042) 270-8640</p>
         </div>
     </footer>
+
+
+    <!-- 예약 화면 팝업창 -->
+    <div class="fixed">
+        <article>
+            <p>	&#10006; </p>
+            <h2>예약이 완료되었습니다! 우리 선사박물관에서 만나요🤍</h2>
+            <ul>
+                <li>&#10003; 예약 날짜 : <span></span></li>
+                <li>&#10003; 예약 인원 : <span></span></li>
+                <li>&#10003; 관람 전시 : <span></span></li>
+            </ul>
+            
+            <div>
+                &#8251; 관람시간: 동절기 - 10시 ~ 18시, 하절기 - 10시 ~ 19시<br>
+                &#8251; 관람 종료시간 30분 전까지 입장 가능.<br>
+                &#8251; 박물관 안으로 물, 껌, 사탕을 포함한 모든 음식물 반입이 제한됩니다. <br>
+                &#8251; 박물관 내에는 안내견을 제외한 반려동물은 입장할 수 없습니다. <br>
+                &#8251; 플래시, 삼각대 및 셀카 스틱을 이용한 촬영, 상업적 용도와 허가되지 않은 촬영은 불가합니다. <br>
+                &#8251; 어린이는 보호자와 함께 입장하셔야 하며, 전시장에서는 어린이가 보호자의 손을 잡고 전시를 관람할 수 있게 해 주세요. <br>
+            </div>
+        </article>
+    </div>
 
 </body>
 </html>

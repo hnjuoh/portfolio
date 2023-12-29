@@ -463,7 +463,7 @@ video {
     }
 }
 
-/* 초코들 사라져라 */
+
 
 
 
@@ -472,7 +472,7 @@ video {
 
 
 /* 둥둥뜨는 애니메이션 */
-/* .banner .banner_inner1 .imgBox > img {
+.banner .banner_inner1 .imgBox > img {
     animation: chocomove2 1s infinite alternate ease-in-out;
 }
 
@@ -483,7 +483,7 @@ video {
     100% {
         transform: translateY(-20px); 
     }
-} */
+}
 
 
 
@@ -635,8 +635,8 @@ video {
 
 /* 레시피 자동슬라이드 */
 .cook_imgBox {
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 400px;
     margin: 20px auto;
     overflow: hidden;
     position: relative;
@@ -649,20 +649,20 @@ video {
 .cook_imgBox ul {
     display: flex;
     position: absolute;
-    margin: 0 700px;
+    margin: 0 300px;
 }
 
 .cook_imgBox li {
     width: 100px;
     height: 200px;
     box-sizing: border-box;
-    /* margin-right: 20px; */
-    margin: 0 170px;
+    /* margin: 0 170px; */
+    margin: 0 165px;
 }
 
-.cook .imgBox li img {
-    width: 300px;
-    height: 320px;
+.cook .img_slide li img {
+    width: 400px;
+    height: 410px;
 }
 
 .cook_imgBox ul:nth-child(1) {
@@ -674,12 +674,18 @@ video {
 .cook_imgBox ul:nth-child(2) {
     left: 100%;
     animation: ani1 15s linear infinite;
+    
 }
 
 
 .cook_imgBox:hover ul {animation-play-state: paused;}
 
+
+
+
 @keyframes ani1 {
+
+    
 
     0%{left: 100%;}
     50%{left: 0;}

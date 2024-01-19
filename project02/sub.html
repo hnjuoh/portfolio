@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUB_Hersheys Chocolate</title>
+    <title>sub_Hersheys Chocolate</title>
+
     <!-- 외부 스타일 시트 연결 -->
     <link rel="stylesheet" href="sub.css">
 
@@ -16,112 +17,134 @@
 
     <!-- 제이쿼리 연결 -->
     <script src="js/js_sub.js"></script>
+
+
+    <!-- 아이콘/파비콘설정 -->
+    <link rel="shortcut icon" href="img/hs_pabi02.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/hs_pabi02.png" type="image/x-icon">
+
+    <!-- 웹앱 전체화면설정 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 
+
+
+
+
 <body>
-
-    <!-- 허쉬 민트초콜릿 마우스 -->
-    <div class="custom-cursor"></div>
-
-    <!-- 헤더 -->
     <header>
-        <!-- 구매페이지 허쉬 광고영상 송출 -->
-        <div class="sub_vid">
+        <ul class="left_nav">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    
+        <ul class="right_nav">
+            <li><a href="hs_login.html" target="_blank">Login</a></li>
+            <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span>0</span></a></li>
+        </ul>
+    </header>
+    
+
+    <!-- 광고 배너 -->
+    <div class="banner_gif">
+        <div class="vid">
             <video autoplay muted loop>
                 <source src="img/hs_campaign.mp4">
             </video>
-            
-            <div class="back_icon"><a href="index.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
         </div>
-
-        <!-- <p>제품 구매</p> -->
-        <!--<img src="img/sub_buy_header.png" alt=""> -->
-        
-    </header>
-
-    <div class="sub_sweet">
-        <p>환상의 맛, 허쉬 브랜드</p>
     </div>
 
 
-
-    <!-- 상단 초코들 -->
-    <div class="upChoco">
-        <ul>
-            <li><a href="#"><img src="img/buy_01.png" alt=""></a></li>
-            <li><a href="#"><img src="img/buy_02.png" alt=""></a></li>
-            <li><a href="#"><img src="img/buy_03.png" alt=""></a></li>
-        </ul>
-    </div>
-
-    <!-- 상단 초코 제품 버튼들 -->
-    
-    <div class="up_BTN01">
-        <ul>
-            <a href="#"><li>BUY</li></a>
-            <a href="#"><li>CART</li></a>
-        </ul>
-    </div>
-    
-    <div class="up_BTN02">
-        <ul>
-            <a href="#"><li>BUY</li></a>
-            <a href="#"><li>CART</li></a>
-        </ul>
-    </div>
-    
-    <div class="up_BTN03">
-        <ul>
-            <a href="#"><li>BUY</li></a>
-            <a href="#"><li>CART</li></a>
-        </ul>
-    </div>
-    
-    
-
-
-
-    <!-- 하단 초코들 -->
-    <div class="downChoco">
-        <ul>
-            <li><a href="#"><img src="img/buy_04.png" alt=""></a></li>
-            <li><a href="#"><img src="img/buy_05.png" alt=""></a></li>
-            <li><a href="#"><img src="img/buy_06.png" alt=""></a></li>
-        </ul>
+    <!-- 구매 문구 -->
+    <div class="buyInfo">
+        <h2>환상의 맛, 허쉬 브랜드</h2>
+        <p>허쉬초콜릿은 즐거움의 심장 박동과도 같아요. <br>
+            달콤함은 마음을 따뜻하게 만들고, 고소함은 여행을 떠나는 듯한 느낌을 줍니다. <br>
+            입안에서 녹아내리는 순간, 시간은 멈추고 행복이 퍼져나갑니다. <br>
+            <br>
+            특별한 순간들이 모여 일상을 아름답게 만들어주는데, 그것이 허쉬초콜릿이 주는 마법입니다. <br>
+            특별한 순간들은 물론, 흔한 순간들도 달콤한 기억으로 남게 해줘요. <br>
+            허쉬초콜릿은 행복의 작은 축제를 선사하여 우리 삶에 특별함을 더합니다.
+        </p>
     </div>
 
 
-    <!-- 하단 초코 제품 버튼들 -->
-    
-        <div class="down_BTN01">
-            <ul>
-                <a href="#"><li>BUY</li></a>
-                <a href="#"><li>CART</li></a>
-            </ul>
+    <!-- 초콜릿 제품 (상단) -->
+    <div class="up_Box">
+        <div class="up_chocolate01">
+            <div class="img"><a href="#"><img src="img/buy_01.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
         </div>
-    
-        <div class="down_BTN02">
-            <ul>
-                <a href="#"><li>BUY</li></a>
-                <a href="#"><li>CART</li></a>
-            </ul>
+        <div class="up_chocolate02">
+            <div class="img"><a href="#"><img src="img/buy_02.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
         </div>
-    
-        <div class="down_BTN03">
-            <ul>
-                <a href="#"><li>BUY</li></a>
-                <a href="#"><li>CART</li></a>
-            </ul>
+        <div class="up_chocolate03">
+            <div class="img"><a href="#"><img src="img/buy_03.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
         </div>
-    
+    </div>
 
+
+    <!-- 중간 광고 배너 -->
+    <div class="banner">
+        <a href="index.html">
+            <p>매 순간이 달콤한 여행, 허쉬초콜릿과 함께.</p>
+        </a>
+    </div>
+
+
+
+
+    <!-- 초콜릿 제품 (하단) -->
+    <div class="down_Box">
+        <div class="down_chocolate01">
+            <div class="img"><a href="#"><img src="img/buy_04.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
+        </div>
+        <div class="down_chocolate02">
+            <div class="img"><a href="#"><img src="img/buy_05.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
+        </div>
+        <div class="down_chocolate03">
+            <div class="img"><a href="#"><img src="img/buy_06.png" alt=""></a></div>
+            <div class="won">&#8361;10,000</div>
+        </div>
+    </div>
+
+    
+    
+    <!-- footer -->
 
     <footer>
-        <div class="choco1"><img src="img/buy_bg_img01.png" alt=""></div>
-        <div class="choco2"><img src="img/buy_bg_img02.png" alt=""></div>
-        <div class="choco3"><img src="img/buy_bg_img03.png" alt=""></div>
-        <div class="choco4"><img src="img/buy_bg_img04.png" alt=""></div>
-        
+        <div class="footerLogo"><img src="img/footer_logo.png" alt="허쉬푸터로고"></div>
+        <p>씨에스에이치 푸드 한국지점 <br>
+            서울특별시 중구 삼일대로 343, 11층 (저동1가, 대신파이낸스센터) <br>
+            Copyright by 2023. HYUNJU OH. All Rights Reserved.
+        </p>
     </footer>
+
+
+
+
+    <!-- 팝업창 설정 -->
+    <div class="shop">
+        <section>
+            <h2>🍫 맛있는 허쉬 초콜릿이 담겼습니다!</h2>
+            <div>
+            </div>
+            <p>내가 담은 초콜릿 : <span>0</span></p>
+        </section>
+
+        <div class="btn">
+            <button class="login"><a href="hs_login.html" target="_blank">결제하기</a></button>
+            <button class="reset">되돌아가기</button>
+            <button class="empty">장바구니 비우기</button>
+        </div>
+
+
+
+    </div>
+
 </body>
 </html>

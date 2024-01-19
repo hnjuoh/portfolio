@@ -1,8 +1,18 @@
-/* 서브페이지 스타일 시트!!! */
 /* 언어 설정 */
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* reset */
 * {margin: 0; padding: 0;}
@@ -11,414 +21,371 @@ a {text-decoration: none; color: #000;}
 img {border: none; vertical-align: bottom;}
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #FFF2DE;
-    cursor: none;
+    background-color: antiquewhite;
+    
 }
 
 
-
-/* sub 스크롤바 설정 */
+/* 메인페이지 스크롤바 색상 설정 */
 ::-webkit-scrollbar {
     width: 6px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background:#FFC450;
+    background: #56230E;
 }
 
 
 
-
-/* sub 민트초콜릿 마우스 */
-.custom-cursor {
-    width: 150px; 
-    height: 150px; 
-    background-image: url('img/cursor.png'); 
-    background-size: cover;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 9999; /* 다른 요소 위에 표시하기 위한 z-index 설정 */
-    pointer-events: none; /* 마우스 이벤트를 무시함 */
-}
-
-
-
-
-/* header 위에 Back 화살표 버튼 설정 */
-.fa-arrow-left {
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    font-size: 40px;
-    animation: arrowani 0.5s infinite alternate;
-    color: #FFC450;
-}
-
-@keyframes arrowani {
-    0% {transform: scale(1.0);
-        opacity: 1;
-        color: #56230E;}
-    100% {transform: scale(1.5);
-            opacity: 0.8;
-            color: #FFC450;}
-}
-
-
-
-/* 헤더 설정 */
-/* 허쉬 광고영상 송출 */
+/* 헤더 */
 header {
     width: 100%;
-    height: 780px;
+    height: 40px;
+    background-color: #56230E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    position: fixed;
+    z-index: 10;
+}
+
+
+/* Home 설정 */
+.left_nav {
+    display: flex;
+}
+.left_nav li {
+    margin-left: 10px;
+}
+
+.left_nav a {
+    color: #FFC450;
+    font-weight: bold;
+}
+
+
+
+/* Login / 장바구니 */
+.right_nav {
+    display: flex;
+    
+}
+.right_nav li {
+    margin-right: 20px;
+
+}
+
+.right_nav li i {}
+
+.right_nav li a {
+    position: relative;
+    color: #FFC450;
+    display: block;
+}
+
+
+/* 장바구니 갯수 */
+.right_nav li span {
+    right: -10px;
+    top: -12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    padding: 5px;
+}
+
+
+
+.right_nav i {
+    width: 15px;
+    height: 15px;
+    color: #FFC450;
+}
+
+
+
+
+
+/* banner_gif 광고 배너 설정 */
+.banner_gif {
+    width: 100%;
+    height: calc(500 - 40);
+}
+
+.banner_gif .vid {
+    width: 100%;
+    height: 350px;
     overflow: hidden;
 }
-.sub_vid {}
 
-
-
-/* 헤더 설정 */
-/* header {
+/* 화면에 꽉 채우려면 비디오 태그에 width 값 100퍼센트 줘야함. */
+video {
     width: 100%;
-    position: relative;
-    
-} */
-/* header img {
+}
+
+
+
+
+/* buyInfo 설정 */
+/* 구매 문구 */
+.buyInfo {
     width: 100%;
-    height: 454px;
-} */
-
-/* 제품 구매  */
-/* header p {
-    color: #FFC450;
-    font-size: 60px;
-    font-weight: bold;
-    position: absolute;
-    top: 40%;
-    left: 44%;
-} */
-
-
-
-
-
-/* 서브 페이지 타이틀 
-(환상의 맛, 허쉬 브랜드)*/
-.sub_sweet {}
-.sub_sweet p {
+    height: 150px;
     text-align: center;
-    font-size: 60px;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    color: #FFC450;
-    font-weight: bold;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 50px 0;
+}
+
+.buyInfo h2 {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #56230E;
+
+}
+
+.buyInfo p {
+    font-size: 15px;
+    color: #56230E;
 }
 
 
-/* 초콜릿 상품 상단 */
-.upChoco {
+
+
+
+
+/* up_Box 설정 */
+/* 초콜릿 제품 (상단) */
+.up_Box {
     width: 100%;
-    height: 600px;
-}
-
-.upChoco ul {
+    height: 700px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
+}
+.up_chocolate01 {
+    margin-right: 20px;
+}
+.up_chocolate01 .img {
+    
+}
+.up_chocolate01 .img a {
+    display: inline-block;
 }
 
-.upChoco li {
-    margin-right: 49px;
-    margin-bottom: 196px;
-}
-
-.upChoco a {
-    cursor: none;
-}
-
-.upChoco img {}
-
-
-
-
-
-/* 상단 버튼1 */
-/* 크리미 밀크 초콜릿 버튼 */
-
-.up_BTN01 {}
-.up_BTN01 ul {
-    display: flex;
-    position: absolute;
-    top: 143.8%;
-    left: 20.8%;
-}
-
-.up_BTN01 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
+.up_chocolate01 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
 }
 
-.up_BTN01 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
+.up_chocolate01 .won a {
+    color: #56230E;
+}
+
+
+
+.up_chocolate02 {
+    margin-right: 20px;
+}
+.up_chocolate02 .img {}
+.up_chocolate02 .img a {
+    display: inline-block;
+}
+.up_chocolate02 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
 }
-.up_BTN01 a {}
-
-
-/* 상단 버튼2 */
-/* 쿠키앤크림 버튼 */
-.up_BTN02 {}
-.up_BTN02 ul {
-    display: flex;
-    position: absolute;
-    top: 143.8%;
-    left: 41.4%;
+.up_chocolate02 .won a {
+    color: #56230E;
 }
 
 
-.up_BTN02 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
+
+.up_chocolate03 {
+    margin-right: 20px;
+}
+.up_chocolate03 .img {}
+.up_chocolate03 .img a {
+    display: inline-block;
+}
+.up_chocolate03 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
 }
-
-/* 마우스 hover 했을 때 버튼 컬러 반전 */
-.up_BTN02 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
-    font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
+.up_chocolate03 .won a {
+    color: #56230E;
 }
 
 
+/* ############################################### */
 
-/* 상단 버튼3 */
-/* 너겟 크리미 밀크아몬드 */
-.up_BTN03 {}
-.up_BTN03 ul {
-    display: flex;
-    position: absolute;
-    top: 143.8%;
-    right: 23%;
-}
-
-.up_BTN03 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* 마우스 hover 했을 때 버튼 컬러 반전 */
-.up_BTN03 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
-    font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
-}
-
-
-
-/* 초콜릿 상품 하단 */
-.downChoco {
+/* banner 설정 */
+.banner {
     width: 100%;
-    height: 600px;
+    height: 800px;
+    background-image: url(img/hs_ad01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
-.downChoco ul {
+.banner p {
+    color: #FFC450;
+    font-size: 100px;
+    text-align: center;
+    margin: 350px 0;
+    font-family: 'SDSamliphopangche_Outline';
+}
+
+
+
+/* ############################################# */
+
+
+
+/* down_Box 설정 */
+/* 초콜릿 제품 (하단) */
+.down_Box {
+    width: 100%;
+    height: 900px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.down_chocolate01 {
+    margin-right: 20px;
+}
+.down_chocolate01 .img {}
+.down_chocolate01 .img a {
+    display: inline-block;
 }
 
-.downChoco li {
-    margin-right: 49px;
-}
-
-.downChoco a {
-    cursor: none;
-}
-
-
-
-
-
-/* 하단 버튼1 */
-/* 키세스 */
-.down_BTN01 {}
-.down_BTN01 ul {
-    display: flex;
-    position: absolute;
-    left: 20.7%;
-    top: 206%;
-}
-
-.down_BTN01 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
+.down_chocolate01 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
 }
 
-/* 마우스 hover 했을 때 버튼 컬러 반전 */
-.down_BTN01 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
+.down_chocolate01 .won a {
+    color: #56230E;
+}
+
+
+
+
+.down_chocolate02 {
+    margin-right: 20px;
+}
+.down_chocolate02 .img {}
+.down_chocolate02 .img a {
+    display: inline-block;
+}
+
+.down_chocolate02 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
+}
+.down_chocolate02 .won a {
+    color: #56230E;
 }
 
 
 
-/* 하단 버튼2 */
-/* 리세스 */
-.down_BTN02 {}
-.down_BTN02 ul {
-    display: flex;
-    position: absolute;
-    left: 41.4%;
-    top: 206%;
+
+
+.down_chocolate03 {
+    margin-right: 20px;
+}
+.down_chocolate03 .img {}
+.down_chocolate03 .img a {
+    display: inline-block;
 }
 
-.down_BTN02 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
+.down_chocolate03 .won {
+    text-align: center;
     font-weight: bold;
-    margin-right: 10px;
 }
-
-/* 마우스 hover 했을 때 버튼 컬러 반전 */
-.down_BTN02 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
-    font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
+.down_chocolate03 .won a {
+    color: #56230E;
 }
-
-
-
-
-
-/* 하단 버튼3 */
-/* 후퍼스 */
-.down_BTN03 {}
-.down_BTN03 ul {
-    display: flex;
-    position: absolute;
-    right: 22.8%;
-    bottom: -110.5%;
-}
-
-.down_BTN03 li {
-    border-radius: 50px;
-    background-color: #3F000B;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #FFC450;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* 마우스 hover 했을 때 버튼 컬러 반전 */
-.down_BTN03 li:hover {
-    border-radius: 50px;
-    background-color: #FFC450;
-    padding: 4px 40px;
-    font-size: 25px;
-    color: #3F000B;
-    font-weight: bold;
-    margin-right: 10px;
-    cursor: none;
-}
-
-
-
-
 
 
 /* footer 설정 */
 footer {
     width: 100%;
-    height: 150px;
+    height: 250px;
+    background-color: #56240e7e;
+    position: relative;
+    
+}
+footer .footerLogo {
+    text-align: center;
+    padding-top: 40px;
+}
+footer p {
+    text-align: center;
+    padding-top: 40px;
+    color: #000;
 }
 
-.choco1 {
+
+/* 팝업창 설정 */
+.shop {
+    display: none;
+    position: fixed;
+    background-color: rgba(169, 134, 96, 0.8);
     width: 100%;
-    height: 400px;
-    position: relative;
-}
-
-.choco1 img {
-    position: absolute;
+    height: 200vh;
     left: 0;
-    bottom: 0;
+    top: 0;
+    color: #000;
 }
 
-.choco2 {
-    position: relative;
+.shop section {
+    width: 90%;
+    margin: 50px auto;
 }
 
-.choco2 img {
-    position: absolute;
-    left: 220px;
-    bottom: 0;
+.shop section .info {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
 }
 
-.choco4 {
-    position: relative;
+.shop div {
+    background-color: #FFC450;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop div em {}
+
+.shop div.btn {
+    margin-top: -80px;
+    background-color: transparent;
+    text-align: center;
+    display: block;
+    
 }
 
-.choco4 img {
-    position: absolute;
-    right: 230px;
-    bottom: -20px;
+
+.shop div.btn button {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #56230E;
+    margin-right: 30px;
+    color: #FFC450;
+    font-size: 20px;
+    font-family: 'SUITE-Regular';
+    
+}
+.shop div.btn button a {
+    color: #FFC450;
 }
 
-.choco3 {
-    position: relative;
-}
-
-.choco3 img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
+.login {}

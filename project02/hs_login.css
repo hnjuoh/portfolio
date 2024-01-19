@@ -1,0 +1,106 @@
+/* 언어 설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none; vertical-align: bottom;}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #FFC450;
+}
+
+
+
+
+/* 로그인 페이지 스크롤바 색상 설정 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #56230E;
+}
+
+
+
+/* header (허쉬 로고) 설정 */
+header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/* 로그인 박스 설정 */
+section {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* 로그인 박스 form 설정 */
+section form {
+    width: 20%;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: 0.1px solid #56230E;
+    box-shadow: 2px 2px 2px 2px #56230E;
+    padding-top: 50px;
+    background-color:rgb(255, 222, 184);
+}
+
+/* 네이버 아이디 input 설정 */
+.naverId input {
+    width: 80%;
+    height: 40px;
+}
+
+/* 네이버 비밀번호 input 설정 */
+.naverPass input {
+    width: 80%;
+    height: 40px;
+}
+
+/* 로그인 상태, 보안 설정 */
+.naverCheck {
+    padding-bottom: 60px;
+}
+
+
+/* 로그인 버튼 설정 */
+.btn {
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background-color: #56230E;
+}
+.btn a {
+    font-size: 20px;
+    color: #FFC450;
+}
+
+
+/* 비밀번호, 아이디 찾기/ 회원가입 설정 */
+.Info {
+    width: 100%;
+    height: 100px;
+}
+
+.Info > div {
+    padding-right: 8px;
+
+}
+
+.Info > div a {
+    color: #56230E;
+    font-weight: bold;
+}

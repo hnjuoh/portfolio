@@ -175,7 +175,7 @@ header h1 {
 .areaBox {
     width: 100%;
     height: 1000px;
-    background-image: url(img/area_new_bg.gif); /* 배경사진 깨짐 바꿔야함 */
+    background-image: url(img/area_bg02.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -633,9 +633,68 @@ video {
 }
 
 
-/* 레시피 자동슬라이드 */
+
+
+/* 레시피 자동 슬라이드 */
 .cook_imgBox {
-    width: 90%;
+    width: 100%;
+    height: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.cook_imgBox .img_slide {
+    display: flex;
+}
+
+.cook_imgBox ul {
+    display: flex;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 190%; /* 각 이미지 리스트가 겹치지 않도록 전체 너비를 두 배로 설정 */
+    animation: slideImg 10s linear infinite; /* 전체 이미지 너비에 맞게 애니메이션 설정 */
+}
+
+.cook_imgBox li {
+    flex: 0 0 16.666%; /* 이미지 리스트 너비 설정 (6개의 이미지니까 100%를 6등분) */
+    box-sizing: border-box;
+}
+
+.cook_imgBox li img {
+    width: 550px;
+    height: 600px;
+}
+
+.cook_imgBox:hover ul {animation-play-state: paused;}
+
+@keyframes slideImg {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* 전체 이미지의 50%만큼 왼쪽으로 이동 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 레시피 자동슬라이드 
+.cook_imgBox {
+    width: 80%;
     height: 400px;
     margin: 20px auto;
     overflow: hidden;
@@ -656,7 +715,7 @@ video {
     width: 100px;
     height: 200px;
     box-sizing: border-box;
-    /* margin: 0 170px; */
+    
     margin: 0 165px;
 }
 
@@ -677,7 +736,6 @@ video {
     
 }
 
-
 .cook_imgBox:hover ul {animation-play-state: paused;}
 
 
@@ -694,12 +752,13 @@ video {
 
 @keyframes ani2 {
 
+
+    
     0%{left: 0;}
     50%{left:-100% ;}
     50.00001% {left: 100%;}
     100%{left: 0%;}
-} 
-
+} */
 
 
 

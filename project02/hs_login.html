@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Hersheys Chocolate</title>
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="hs_login.css">
+
+    <!-- 아이콘/파비콘설정 -->
+    <link rel="shortcut icon" href="img/hs_pabi02.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/hs_pabi02.png" type="image/x-icon">
+
+    <!-- 웹앱 전체화면설정 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 네이버 아이디 연동 -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+
+
+
+<body>
+
+
+
+    <!-- 헤더 (허쉬 로고) -->
+    <header>
+        <a href="index.html"><img src="img/hs_logo.png" alt=""></a>
+    </header>
+
+    <!-- 로그인 박스 -->
+    <section>
+        <form action="">
+            <div class="naverId"><input type="text" placeholder="아이디"></div>
+            <div class="naverPass"><input type="password" placeholder="비밀번호"></div>
+
+            <div class="naverCheck">
+                <input type="checkbox" class="checkbox">로그인 상태 유지
+                <input type="radio" class=""> 보안
+            </div>
+            
+            <button class="btn"><a href="#">LOGIN</a></button>
+
+
+            <!-- 네이버 로그인 버튼 -->
+            <div id="naverIdLogin"></div>
+            <div id="naver_id_login"></div>
+
+            <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+            <script type="text/javascript">
+                var naverLogin = new naver.LoginWithNaverId({
+                    clientId: "3V7SKcGvQLZhTGcdaUVj", // 여기에 클라이언트 ID 입력
+                    callbackUrl: "YOUR_CALLBACK_URL", // 콜백 URL 입력
+                    isPopup: false, // 팝업을 통한 연동처리 여부
+                    loginButton: {color: "green", type: 1, height: 40} // 로그인 버튼의 타입을 지정
+        
+                });
+
+                naverLogin.init();
+
+
+
+                // var naver_id_login = new naver_id_login("3V7SKcGvQLZhTGcdaUVj", "YOUR_CALLBACK_URL");
+                // var state = naver_id_login.getUniqState();
+                // naver_id_login.setButton("white", 2,40);
+                // naver_id_login.setDomain("YOUR_SERVICE_URL");
+                // naver_id_login.setState(state);
+                // naver_id_login.setPopup();
+                // naver_id_login.init_naver_id_login();
+            </script>
+
+
+
+
+            
+        </form> 
+    
+    </section>
+    <!-- 로그인 박스 끝. -->
+
+
+
+
+    <!-- 비밀번호, 아이디 찾기/ 회원가입 -->
+        <section class="Info">
+            <div class="findPass"><a href="#">비밀번호찾기</a></div>
+            <div class="findId"><a href="#">아이디찾기</a></div>
+            <div class="join"><a href="#">회원가입</a></div>
+        </section>
+    <!-- 비밀번호, 아이디 찾기/ 회원가입 끝. -->
+
+
+    
+        
+    
+</body>
+</html>

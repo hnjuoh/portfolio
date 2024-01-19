@@ -59,7 +59,7 @@ header li:hover p {
 .insta {
     width: 100%;
     height: 100vh;
-    background-image: url(img/instagram_bg.svg);
+    background-image: url(img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

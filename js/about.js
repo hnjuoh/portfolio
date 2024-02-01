@@ -11,8 +11,28 @@ $(function(){
             } else {
                 scrollIndicator.css('opacity', 1);
             }
+
+    
+            
+            var ht = $(this).scrollTop()
+            console.log(ht)
+            
+        });
+
+
+        // 메뉴 About을 클릭하면 프로필 박스로 이동.
+        $('nav ul .ab').click(function(e){
+            e.preventDefault()
+            var profil = $('section').offset().top;
+            console.log(profil)
+            $('html, body').stop().animate({scrollTop:profil},400);
         });
     });
+
+
+
+
+
 
     // 발전-성장-책임감에 마우스 올리면 아래 li들이 보여라.
     $(function(){
@@ -27,6 +47,8 @@ $(function(){
 
 
     })
+    
+    
 
 
 

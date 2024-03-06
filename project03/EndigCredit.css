@@ -92,7 +92,7 @@ header li:hover p {
 }
 
 
-
+/* 엔딩 크레딧 텍스트 배경 부분 설정 */
 .endBox {
     position: fixed;
     top: calc(100% - 300px);
@@ -109,15 +109,15 @@ header li:hover p {
 
 .endBox div {
     width: 100%;
-    height: 500px;
+    height: 800px;
     position: absolute;
     left: 10px;
     top: 0;
 }
 
 
-
-.endBox div p {
+/* 인터뷰 내용 텍스트 설정 */
+.endBox div p:nth-child(1) {
     margin-top: 40px;
     width: 100%;
     height: 480px;
@@ -129,16 +129,31 @@ header li:hover p {
     /* padding-top: 10px; */
 }
 
-.endBox p {}
+.endBox strong {}
 
-.endBox strong {
-    font-size: 50px;
+/* Actor LEE JUN HYUK 설정 */
+.endBox div p:nth-child(2) {
+    margin-top: 50px;
+    font-family: 'Handletter';
+    font-size: 55px;
+    color: #eee;
+    text-align: center;
+    /* font-size: 50px; */
 }
 
-
-
+/* 본 사이트는 포트폴리오용 사이트 입니다. 설정 */
 .endBox div p:nth-child(3) {
-    margin-top: -410px;
+    margin-top: 40px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
+    color: #eee;
+    text-align: center;
+}
+
+/* COPYRIGHT 설정 */
+.endBox div p:nth-child(4) {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: #eee;
+    text-align: center;
 }

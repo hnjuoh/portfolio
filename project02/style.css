@@ -9,7 +9,7 @@ ul, ol {list-style: none;}
 a {text-decoration: none; color: #000;}
 img {border: none; vertical-align: bottom;}
 body {font-family: 'Noto Sans KR', sans-serif;
-        cursor: none;
+        /* cursor: none; */
         overflow-x: hidden; /* 가로 스크롤 x*/
 }
 
@@ -18,7 +18,7 @@ body {font-family: 'Noto Sans KR', sans-serif;
 
 /* 메인페이지 스크롤바 색상 설정 */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 15px;
     height: 10px;
 }
 
@@ -175,7 +175,7 @@ header h1 {
 .areaBox {
     width: 100%;
     height: 1000px;
-    background-image: url(img/area_bg02.gif);
+    background-image: url(img/choco_back.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
